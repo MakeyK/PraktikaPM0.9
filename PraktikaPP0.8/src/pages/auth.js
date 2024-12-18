@@ -10,7 +10,7 @@ import { logins } from '../http/userApi'
 
 const Authorization = observer(() => {
     document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundColor = "#FFFFFF";
+    document.body.style.backgroundColor = "#DBDBDB";
     const { user } = useContext(Context)
     const navigate = useNavigate()
     const location = useLocation()

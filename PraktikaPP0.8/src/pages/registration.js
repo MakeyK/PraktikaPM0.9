@@ -9,7 +9,7 @@ import { registration } from "../http/userApi";
 
 
 const Registration = observer(() => {
-    document.body.style.backgroundColor = "#FFFFFF";
+    document.body.style.backgroundColor = "#DBDBDB";
     document.body.style.backgroundRepeat = "no-repeat";
     const { user } = useContext(Context)
     const navigate = useNavigate()
