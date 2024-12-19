@@ -1,5 +1,6 @@
 const sequelize = require('../database')
 const {DataTypes, UUIDV4} = require('sequelize')
+const { Sequelize } = require('../database')
 
 const User = sequelize.define('users',{
   id_user: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
@@ -14,7 +15,7 @@ const Request = sequelize.define('request', {
   id_request: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
   id_user: {type: DataTypes.INTEGER, references: {model: User, key: 'id_user'}},
   tema: {type: DataTypes.STRING},
-  date_and_time_supply: {type: DataTypes.DATE},
+  date_and_time_supply: {type: DataTypes.DATE, defaultValue: Sequelize.NOW},
   description_problem: {type: DataTypes.STRING},
   status_request: {type: DataTypes.STRING, defaultValue:'Новое'}
 }, {timestamps: false})
