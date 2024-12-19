@@ -40,7 +40,7 @@ const HistoryRequest = observer(() => {
       style={{ height: window.innerHeight - 1 }}>
       <Card style={{
         position: 'fixed', borderRadius: '36px', borderColor: 'white', width: 1796, height: 790, marginTop:'150px',
-        fontFamily: "Abhaya Libre", backgroundColor: '#878787', display: 'flex', justifyContent: 'center', alignItems: 'center'
+        fontFamily: 'SeoulHangang CEB', backgroundColor: '#878787', display: 'flex', justifyContent: 'center', alignItems: 'center'
       }} className="p-3 #FFFAF4">
 
         {/* Палки горизонтальные
@@ -64,12 +64,12 @@ const HistoryRequest = observer(() => {
         <RequestList user={UserRequest.getUserRequest()}/>
 
         <Button
-          style={{ width: 361, position: 'relative', marginTop: '35%', height: 130, left: 0, top: 0, background: '#F56F10', boxShadow: '0px 0px 12.899999618530273px 18px rgba(0, 0, 0, 0.25) inset', borderRadius: 88 }}
+          style={{ width: 361, position: 'relative', marginTop: '15%', height: 130, background: '#F56F10', boxShadow: '0px 0px 12.899999618530273px 18px rgba(0, 0, 0, 0.25) inset', borderRadius: 88 }}
           size="lg"
           onClick={newrequest}>
           <div style={{
-            width: 273, left: 44, top: 18, marginLeft: '30px', textAlign: 'center', color: '#403F3F',
-            fontSize: 32, fontFamily: 'SeoulHangang CEB', fontWeight: '400', letterSpacing: 5.44, wordWrap: 'break-word'
+            width: 273, marginLeft: '30px', textAlign: 'center', color: '#403F3F',
+            fontSize: 32, fontFamily: 'SeoulHangang CEB', letterSpacing: 5.44
           }}>
             Создать новое обращение</div>
         </Button>
