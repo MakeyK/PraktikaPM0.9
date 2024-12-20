@@ -43,28 +43,28 @@ const HistoryRequest = observer(() => {
         fontFamily: 'SeoulHangang CEB', backgroundColor: '#878787', display: 'flex', justifyContent: 'center', alignItems: 'center'
       }} className="p-3 #FFFAF4">
 
-        {/* Палки горизонтальные
+        {/* Палки горизонтальные */}
         <div style={{ width: 1730, height: 16, left: 33, top: 218, position: 'absolute', background: '#676767', borderRadius: 93 }} />
 
-        Палки вертикальные
+        {/* Палки вертикальные */}
         <div style={{ width: 98, height: 16, left: 137, top: 234, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: '#676767', borderRadius: 93 }} />
         <div style={{ width: 98, height: 16, left: 523, top: 234, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: '#676767', borderRadius: 93 }} />
         <div style={{ width: 88, height: 16, left: 955, top: 224, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: '#676767', borderRadius: 93 }} />
         <div style={{ width: 85, height: 16, left: 1407, top: 221, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: '#676767', borderRadius: 93 }} />
 
 
-        Атрибуты
+        {/* Атрибуты */}
         <div style={{ left: 68, top: 146, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>№</div>
         <div style={{ left: 276, top: 146, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>Тема</div>
         <div style={{ left: 599, top: 146, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>Сообщение</div>
         <div style={{ left: 1021, top: 146, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>Дата и время</div>
         <div style={{ left: 1508, top: 149, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>Статус</div>
-        <div style={{ left: 688, top: 40, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>История обращений</div>  */}
+        <div style={{ left: 688, top: 40, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'SeoulHangang CEB', letterSpacing: 8.16 }}>История обращений</div> 
 
         <RequestList user={UserRequest.getUserRequest()}/>
 
         <Button
-          style={{ width: 361, position: 'relative', marginTop: '15%', height: 130, background: '#F56F10', boxShadow: '0px 0px 12.899999618530273px 18px rgba(0, 0, 0, 0.25) inset', borderRadius: 88 }}
+          style={{ width: 361, position: 'relative', marginTop: '30px', height: 130, background: '#F56F10', boxShadow: '0px 0px 12.899999618530273px 18px rgba(0, 0, 0, 0.25) inset', borderRadius: 88 }}
           size="lg"
           onClick={newrequest}>
           <div style={{
@@ -73,7 +73,7 @@ const HistoryRequest = observer(() => {
           }}>
             Создать новое обращение</div>
         </Button>
-      </Card><NavBar />
+      </Card><NavBar/>
     </Container>);
 });
 

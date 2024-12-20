@@ -64,7 +64,7 @@ class RequestController
             return res.status(500).json({message: "Не удалось отклонить заявку"})
         }
     }
-    // Для Админа
+    // Для User
     async getAll(req, res, next) {
         try {
             const role = req.user.role
@@ -79,7 +79,7 @@ class RequestController
             return res.status(500).json({ message: "Не удалось вывести все данные" })
         }
     }
-    // Для user
+    // Для Админа
     async getAllID(req, res, next) {
         try {
             const id_user = req.user.id_user

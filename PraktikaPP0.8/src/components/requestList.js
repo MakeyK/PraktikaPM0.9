@@ -6,42 +6,37 @@ import { Col, ListGroupItem } from "react-bootstrap";
 const RequestList = observer(({ user }) => {
     return (
         <ListGroup style={{
-            display:'inline-block', marginTop:'25%',
+            display: "inline-block", 
             borderRadius: "0 px",
-            marginLeft: 15, color: '#FFFFFF4D',
-            fontSize: '48px', fontFamily: 'SeoulHangang CEB'
+            color: '#FFFFFF4D',
+            fontSize: '48px', fontFamily: 'SeoulHangang CEB',
         }}>
+
             {
                 user.map((data) => (
-                    <ListGroup key={data.id_request} style={{ backgroundColor: '#878787', display:''}} className="my-2">
-                        {/* <Col style={{
-                            display:'flex', justifyContent:'center', alignItems:'center',
-                            border: "1px solid #878787",
-                            borderRadius: "50px", overflow: 'scroll'
-                        }}>
-                            {data.status_request == "Новое" ?
-                             <div style={{ color: "blue" }}>Новое</div> : data.status_request == "Отклонено" ? <div
-                                style={{ color: "red" }}>Отклонено</div> :
-                                <div style={{ color: "green" }}>Подтверждено</div>
-                            <div style={{ color: "black" }}>Описание: <div>{data.description_problem}</div>
-                            </div>
-                        </Col> */}
-                        <ListGroup.Item style={{fontSize:'48px', background:'#878787', color:'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB', width:'1500px'}}>
-                                №
+                    <ListGroup key={data.id_request} style={{ backgroundColor: '#878787', display: "block", marginTop: "20px" }}>
+
+                        <ListGroup.Item style={{ fontSize: '30px', marginRight: "0px", background: '#878787', color: 'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB', display: "inline-block" }}>
+                            {data.id_request}
                         </ListGroup.Item>
-                        <ListGroup.Item style={{fontSize:'48px', background:'#878787', color:'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB'}}>
+                        <ListGroup.Item style={{ fontSize: '30px', marginLeft: "100px", background: '#878787', color: 'white',marginRight: "150px",
+                        letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB', display: "inline-block", maxHeigh: "200px", maxWidth:"250px" }}>
                             {data.tema}
                         </ListGroup.Item>
-                        <ListGroup.Item style={{fontSize:'48px', background:'#878787', color:'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB'}}>
+                        <ListGroup.Item style={{ fontSize: '30px', marginLeft: "50px", background: '#878787',
+                         maxHeigh: "100px", maxWidth:"250px", color: 'white', letterSpacing: '8.16px', marginRight: "0px",
+                         fontFamily: 'SeoulHangang CEB', display: "inline-block" }}>
                             {data.description_problem}
                         </ListGroup.Item>
-                        <ListGroup.Item style={{fontSize:'48px', background:'#878787', color:'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB'}}>
-                            {data.date_and_time_supply}
+                        <ListGroup.Item style={{ fontSize: '25px', marginLeft: "200px", background: '#878787', maxHeigh: "100px",
+                         maxWidth:"300px", color: 'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB', display: "inline-block" }}>
+                        {data.date_and_time_supply.split("-")[2].split("T")[0]}.
+                        {data.date_and_time_supply.split("-")[1]}.{data.date_and_time_supply.split("-")[0]} в {data.date_and_time_supply.split("-")[2].split("T")[1].split(".")[0]}
                         </ListGroup.Item>
-                        <ListGroup.Item style={{fontSize:'48px', background:'#878787', color:'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB'}}>
+                        <ListGroup.Item style={{ fontSize: '30px', marginLeft: "100px", background: '#878787', maxHeigh: "100px", maxWidth:"300px", color: 'white', letterSpacing: '8.16px', fontFamily: 'SeoulHangang CEB', display: "inline-block" }}>
+                            {data.status_request}
+                        </ListGroup.Item>
                         
-                        </ListGroup.Item>
-
                     </ListGroup>
                 ))
             }

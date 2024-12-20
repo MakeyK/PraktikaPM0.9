@@ -30,7 +30,15 @@ export const getAll = async () => {
         alert(error.response.data.message)
     }
 }
-
+export const getAllID = async () => {
+    try {
+        const {data} = await $authHost.get(`getall`, {}, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }})
+        return data
+    } catch (error) {
+        alert(error.response.data.message)
+    }
+}
 export const updateAccess = async (id_request) => {
     try {
         const { data } = await $authHost.patch(`/access`, { id_request }, {
